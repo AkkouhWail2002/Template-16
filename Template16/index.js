@@ -1,0 +1,72 @@
+document.getElementById("rd1").onchange=function(){
+    if(document.getElementById("rd1").checked){
+        document.getElementById("txt1").style.opacity=1;
+        document.getElementById("img1").style.opacity=1;
+        document.getElementById("txt2").style.opacity=0;
+        document.getElementById("img2").style.opacity=0;
+        document.getElementById("txt3").style.opacity=0;
+        document.getElementById("img3").style.opacity=0;
+    }  
+}
+document.getElementById("rd2").onchange=function(){
+    if(document.getElementById("rd2").checked){
+        document.getElementById("txt2").style.opacity=1;
+        document.getElementById("img2").style.opacity=1;
+        document.getElementById("txt1").style.opacity=0;
+        document.getElementById("img1").style.opacity=0;
+        document.getElementById("txt3").style.opacity=0;
+        document.getElementById("img3").style.opacity=0;
+    }
+}
+document.getElementById("rd3").onchange=function(){
+    if(document.getElementById("rd3").checked){
+        document.getElementById("txt3").style.opacity=1;
+        document.getElementById("img3").style.opacity=1;
+        document.getElementById("txt2").style.opacity=0;
+        document.getElementById("img2").style.opacity=0;
+        document.getElementById("txt1").style.opacity=0;
+        document.getElementById("img1").style.opacity=0;
+    }
+}
+
+//Scroll
+onscroll=function(){
+    if(scrollY<600){
+        this.document.getElementById("a1").style.color="#e46948";
+        this.document.getElementById("a2").style.color="#e9e9e9";
+        this.document.getElementById("a3").style.color="#e9e9e9";
+        this.document.getElementById("a4").style.color="#e9e9e9";
+    }
+    if(scrollY>600){
+        this.document.getElementById("side-bar").style.backgroundColor="#2c343e";
+        this.document.getElementById("side-bar").style.position="fixed";
+        this.document.getElementById("a1").style.color="#e9e9e9";
+        this.document.getElementById("a2").style.color="#e46948";
+        this.document.getElementById("a3").style.color="#e9e9e9";
+        this.document.getElementById("a4").style.color="#e9e9e9";
+    }
+    if(this.scrollY>1250){
+        this.document.getElementById("a1").style.color="#e9e9e9";
+        this.document.getElementById("a2").style.color="#e9e9e9";
+        this.document.getElementById("a3").style.color="#e46948";
+        this.document.getElementById("a4").style.color="#e9e9e9";
+    }
+    if(this.scrollY>1900){
+        this.document.getElementById("a1").style.color="#e9e9e9";
+        this.document.getElementById("a2").style.color="#e9e9e9";
+        this.document.getElementById("a3").style.color="#e9e9e9";
+        this.document.getElementById("a4").style.color="#e46948";
+    }
+}
+
+//Menu
+document.getElementById("btn-menu").onclick=function(){
+if(document.getElementById("menu").style.transform=="translateY(-100%)"){
+        document.getElementById("menu").style.transform="translateY(0%)";
+        document.getElementById("menu").style.visibility="visible";
+    }
+else{
+        document.getElementById("menu").style.transform="translateY(-100%)";
+        document.getElementById("menu").style.visibility="hidden";
+}
+}
